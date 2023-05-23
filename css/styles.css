@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #AAA;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000;
+  }
+/*--------------------Historia Usuario----------------------*/
+.diagrama {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background:#AAA;
+  }
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  .calendario {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background:#AAA;
+  }
+  .equipo {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background:#AAA;
+  }
+  .resultado {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background:#AAA;
+  }

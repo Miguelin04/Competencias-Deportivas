@@ -1,0 +1,286 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.contenedor {
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 0px;
+  position: relative;
+}
+
+header .contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .LogoTipo {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  color: white;
+  font-size: 30px;
+}
+
+header nav a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo {
+  color: #AAA;
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.deporte-principal {
+  font-size: 10px;
+  min-height: 30.62em;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/futbool.jpg);
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 3.12em;
+  display: flex;
+  align-items: end;
+}
+
+.deporte-principal .contenedor {
+  margin: 0 auto;
+  margin-bottom: 4.25em;
+}
+
+.deporte-principal .titulo {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+
+.deporte-principal .descripcion {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.3em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
+}
+
+.deporte-principal .boton {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: #fff;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
+}
+
+.deporte-principal .boton:hover {
+  background: #fff;
+  color: #000;
+}
+
+.deporte-principal .boton i {
+  margin-right: 1.25em;
+}
+
+.contenedor-titulo-controles {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores.button {
+  background: #fff;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 2px;
+}
+
+.eventos-deportivos .indicadores button:hover,
+.eventos-deportivos .indicadores button.activo {
+  background: #AAA;
+}
+
+.eventos-depotivos {
+  margin-bottom: 70px;
+}
+
+.eventos-deportivos .contenedor-principal {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.eventos-deportivos .contenedor-principal .flecha-izquierda,
+.eventos-deportivos .contenedor-principal .flecha-derecha {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: 0.2s ease all;
+}
+
+.eventos-deportivos .flecha-izquierda:hover,
+.eventos-deportivos .flecha-derecha:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.eventos-deportivos .contenedor-principal .flecha-izquierda {
+  left: 0;
+}
+
+.eventos-deportivos .contenedor-principal .flecha-derecha {
+  right: 0;
+}
+
+.eventos-deportivos .contenedor-carousel {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.eventos-deportivos .contenedor-carousel .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.eventos-deportivos .carousel .deporte {
+  min-width: 20%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.eventos-deportivos .carousel .deporte:hover img {
+  transform: scale(1.2);
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.eventos-deportivos .carousel .deporte img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* Imágenes circulares */
+.contenedor-autor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.autor {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los elementos horizontalmente */
+  margin-bottom: 20px;
+}
+
+.autor img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0;
+  margin-bottom: 10px; /* Espacio entre la imagen y el nombre */
+  border: 2px solid #fff; /* Borde blanco */
+}
+
+.contenido-texto-autor {
+  text-align: center; /* Centrar el texto */
+}
+
+.contenido-texto-autor h4 {
+  margin: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 800px) {
+  header .LogoTipo {
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
+
+  header .contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .deporte-principal {
+    font-size: 14px;
+  }
+
+  .deporte-principal .descripcion {
+    max-width: 100%;
+  }
+
+  .eventos-deportivos .contenedor-carousel {
+    overflow: visible;
+  }
+
+  .eventos-deportivos .contenedor-carousel .carousel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .eventos-deportivos .indicadores,
+  .eventos-deportivos .flecha-izquierda,
+  .eventos-deportivos .flecha-derecha {
+    display: none;
+  }
+}
+
+ 
