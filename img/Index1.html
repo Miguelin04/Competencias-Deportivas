@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeonato UNL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Rubik:ital,wght@0,400;0,800;1,300&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="head">
+        <div class="logo">
+            <a href="https://www.unl.edu.ec/"><img src="media/UNL.jpg" height="35px" alt="FotoLogo" class="FotoLogo"></a>
+        </div>
+
+        <nav class="navbar">
+            <a href="#section-INICIO" >Inicio</a>
+            <a href="#section-INTEGRANTES">Integrantes</a>
+            <a href="#section-GITFLOW">GitFlow</a>
+            <a href="#section-UML">UML</a>
+            <a href="#section-HU">Historias usuario</a>
+        </nav>
+    </div>
+
+    <header class="content header" id="section-INICIO">
+        <h2 class="title1">Grupo 5</h2>
+    </header>
+
+    <section class="content sau"id ="section-GITFLOW">
+        <h2 class="titleGF">GitFlow</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio consequatur soluta aliquid, reprehenderit eligendi qui impedit deleniti? Earum dolor quis commodi. Minus, quia repellat saepe eligendi dolorem iure ducimus temporibus!</p>
+    </section>
+    
+    <section class="content abaut"id="section-HU">
+        <h2 class="title2">Historias de usuario</h2>
+        <div class ="TABLA">
+            <img class = "tabla" src="media/T1.jpeg"height="400px" width="40%" alt="Historias">
+        </div>
+        <div class="TABLA2">
+            <img class = "tabla2" src="media/T2.jpeg"height="400px" width="40%" alt="Historias">
+        </div>
+    </section>
+    <section class="content uml" id="section-UML">
+        <article class="contain">
+            <h2 class="title">DIAGRAMA DE CLASES</h2>
+            <figure class="UML">
+                <img class = "UML"src="media/AA 3.jpg" height="440px" width="90%" alt="mapa">
+            </figure>
+        </article>
+    </section>
+
+    <section class="content contact" id="section-INTEGRANTES">
+        <h2 class="title"> Integrantes</h2>
+        <div class="box-container">
+            <div class="box">
+                <a href="https://jhonzu69.github.io/"><img src="media/JR.jpeg" height="100px" alt="FotoDeJhon" class="F-Integrante alt="></a>
+                <h3>Jhon Rojas</h3>
+                <p>jhon.rojas@unl.edu.ec</p>
+            </div>
+
+            <div class="box">
+                <a href="https://darwing23.github.io/CVWeb.github.io/"><img src="media/DG.jpg" height="100px" alt="FotoDeDarwin" class="F-Integrante alt="></a>
+                <h3>Darwin Granda</h3>
+                <p>darwin.granda@unl.edu.ec</p>
+            </div>
+
+            <div class="box">
+                <img src="media/AS.jpeg" height="100px" alt="FotoDeAlexander" class="F-Integrante">
+                <h3>Alexander Sanchez</h3>
+                <p>alexander.a.sanchez@unl.edu.ec</p>
+            </div>
+
+            <div class="box">
+                <a href="https://elia700.github.io/"><img src="media/EP.jpeg" height="100px" alt="FotoDeElias" class="F-Integrante alt="></a>
+                <h3>Elias Poma</h3>
+                <p>elias.poma@unl.edu.ec</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+      
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+      </script>
+</body>
+</html>  

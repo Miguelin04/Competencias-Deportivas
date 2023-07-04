@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inscripción de Equipo Deportivo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    #playersContainer {
+      margin-bottom: 10px;
+    }
+
+    .player {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    #addPlayerButton {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      margin: 0 auto;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #addPlayerButton:hover {
+      background-color: #45a049;
+    }
+
+    #registrationStatus {
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Inscripción de Equipo Deportivo</h1>
+
+  <form id="registrationForm" action="#" method="post">
+    <label for="teamName">Nombre del Equipo:</label>
+    <input type="text" id="teamName" name="teamName" required>
+
+    <label for="sport">Deporte:</label>
+    <select id="sport" name="sport">
+      <option value="futbol">Fútbol</option>
+      <option value="baloncesto">Baloncesto</option>
+      <option value="ecuavoley">Ecuavoley</option>
+    </select>
+
+    <label for="captainName">Nombre del Capitán:</label>
+    <input type="text" id="captainName" name="captainName" required>
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <h2>Jugadores:</h2>
+    <div id="playersContainer">
+      <div class="player">
+        <label for="playerName1">Nombre:</label>
+        <input type="text" id="playerName1" name="playerName[]" required>
+
+        <label for="playerRole1">Rol:</label>
+        <select id="playerRole1" name="playerRole[]">
+          <option value="Delantero">Delantero</option>
+          <option value="Centrocampista">Centrocampista</option>
+          <option value="Defensa">Defensa</option>
+          <option value="Portero">Portero</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="addPlayerButton">Agregar Jugador</button>
+
+    <input type="submit" value="Enviar Inscripción">
+  </form>
+
+  <div id="registrationStatus">
+    <h2>Estado de la Inscripción:</h2>
+    <p id="statusMessage"></p>
+  </div>
+
+  <script>
+    var playerCount = 1;
+
+    document.getElementById("addPlayerButton").addEventListener("click", function() {
+      var playersContainer = document.getElementById("playersContainer");
+      var newPlayerDiv = document.createElement("div");
+      newPlayerDiv.classList.add("player");
+
+      var playerNameLabel = document.createElement("label");
+      playerNameLabel.textContent = "Nombre:";
+      var playerNameInput = document.createElement("input");
+      playerNameInput.type = "text";
+      playerNameInput.name = "playerName[]";
+      playerNameInput.required = true;
+
+      var playerRoleLabel = document.createElement("label");
+      playerRoleLabel.textContent = "Rol:";
+      var playerRoleSelect = document.createElement("select");
+      playerRoleSelect.name = "playerRole[]";
+
+      var roles = ["Delantero", "Centrocampista", "Defensa", "Portero"];
+      for (var i = 0; i < roles.length; i++) {
+        var roleOption = document.createElement("option");
+        roleOption.value = roles[i];
+        roleOption.textContent = roles[i];
+        playerRoleSelect.appendChild(roleOption);
+      }
+
+      newPlayerDiv.appendChild(playerNameLabel);
+      newPlayerDiv.appendChild(playerNameInput);
+      newPlayerDiv.appendChild(playerRoleLabel);
+      newPlayerDiv.appendChild(playerRoleSelect);
+
+      playersContainer.appendChild(newPlayerDiv);
+
+      playerCount++;
+    });
+
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Simular una solicitud de inscripción (aquí es donde se realizaría una solicitud al servidor para procesar la inscripción)
+
+      // Obtener los datos del formulario
+      var teamName = document.getElementById("teamName").value;
+      var sport = document.getElementById("sport").value;
+      var captainName = document.getElementById("captainName").value;
+      var email = document.getElementById("email").value;
+      var players = [];
+
+      var playerInputs = document.querySelectorAll("input[name='playerName[]']");
+      var roleSelects = document.querySelectorAll("select[name='playerRole[]']");
+
+      for (var i = 0; i < playerInputs.length; i++) {
+        var playerName = playerInputs[i].value;
+        var playerRole = roleSelects[i].value;
+        players.push({ name: playerName, role: playerRole });
+      }
+
+      // Simular un procesamiento de inscripción exitoso
+      var successMessage = "¡El equipo " + teamName + " (" + sport + ") ha sido inscrito exitosamente!";
+
+      // Mostrar el estado de la inscripción
+      document.getElementById("statusMessage").textContent = successMessage;
+      document.getElementById("registrationStatus").style.display = "block";
+    });
+  </script>
+</body>
+</html>
+
+
+
+
